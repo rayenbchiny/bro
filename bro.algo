@@ -1,0 +1,19 @@
+ALGORITHM Insertion sort
+
+VAR
+    arr <- [2,1,4,3,5] //exemple of array
+    n <- arr.lenght // Storing the length of array 'a' in variable 'n'
+
+BEGIN
+   
+    FOR i FROM 1 TO n-1 DO // Loop through the array starting from the second element
+        value <- arr[i] // Store the value of 'a[i]' in the variable 'value'
+        tmp <- i  // Store the current index 'i' in the variable 'tmp'
+    
+    WHILE (tmp > 0 AND arr[tmp-1] > value) DO   // Check if the previous element is greater than the current value
+        arr[tmp] <- arr[tmp-1] // Shift elements to the right to make space for insertion
+        tmp <- tmp - 1 // Move to the previous element
+    END_WHILE
+  arr[tmp] <- value // Insert the 'value' at the correct position in the sorted sequence
+    END_FOR
+END
